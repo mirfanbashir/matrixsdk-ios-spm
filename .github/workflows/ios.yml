@@ -55,7 +55,7 @@ jobs:
           swift package compute-checksum matrix-ios-sdk/build/MatrixSDK.xcframework.zip > checksum
           CHECKSUM=$(cat checksum)
           cat checksum
-          swift generate-package.swift "https://github.com/${{ github.repository_owner }}/MatrixSDK/releases/download/${{ github.event.inputs.version }}/MatrixSDK.xcframework.zip" "$CHECKSUM"
+          swift generate-package.swift "https://github.com/${{ github.repository_owner }}/matrixsdk-ios-spm/releases/download/${{ github.event.inputs.version }}/MatrixSDK.xcframework.zip" "$CHECKSUM"
 
       - name: Push the generated package
         run: |
