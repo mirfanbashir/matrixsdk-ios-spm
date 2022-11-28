@@ -2,20 +2,19 @@ import Foundation
 
 func packageString(url: String, checksum: String) -> String {
     """
-    // swift-tools-version: 5.7
-  
-    import PackageDescription
-  
-    let package = Package(
-        name: "MatrixSDK",
-        products: [
-            .library(name: "MatrixSDK", targets: ["MatrixSDK"])
-        ],
-        targets: [
-            .binaryTarget(name: "MatrixSDK", url: "\(url)", checksum: "\(checksum)")
-        ]
-    )
-    
+// swift-tools-version: 5.7
+import PackageDescription
+
+let package = Package(
+    name: "MatrixSDK",
+    products: [
+        .library(name: "MatrixSDK", targets: ["MatrixSDK"])
+    ],
+    targets: [
+        .binaryTarget(name: "MatrixSDK", url: "\(url)", checksum: "\(checksum)")
+    ]
+)
+
     """
 }
 
